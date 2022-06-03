@@ -98,6 +98,7 @@ table tr td:last-child {
     transform: scaleX(0.0);
     transform: scaleY(0.0);
     transition: transform 225ms ease-in-out;
+    z-index: 1;
   
 }
 
@@ -105,4 +106,27 @@ table tr td:last-child {
 
     transform: rotate(90deg) scaleX(0.0);
     
+}
+.game-over {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80vh;
+    margin-left: 120px;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIN {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
